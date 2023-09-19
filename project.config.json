@@ -1,0 +1,28 @@
+{
+   "description": "项目配置文件。",
+   "packOptions": {
+      "ignore": [],
+      "include": []
+   },
+   "setting": {
+      "urlCheck": true,
+      "es6": true,
+      "postcss": true,
+      "minified": true,
+      "newFeature": true,
+      "babelSetting": {
+         "ignore": [],
+         "disablePlugins": [],
+         "outputPath": ""
+      }
+   },
+   "compileType": "miniprogram",
+   "libVersion": "2.28.0",
+   "appid": "wxd9c092bd1095b2c6",
+   "projectname": "wxapp-mi-mall",
+   "condition": {},
+   "editorSetting": {
+      "tabIndent": "insertSpaces",
+      "tabSize": 3
+   }
+}

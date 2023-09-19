@@ -1,0 +1,28 @@
+<!--pages/addr/addr.wxml-->
+<radio-group bindchange="radioChange">
+<view class='list-item' wx:for="{{addressList}}" wx:key="index">
+<view class='item-head'>
+    <text>{{item.label}}</text>
+    <text class='right'>{{item.tel}}</text>
+</view>
+
+<view class='item-desc'>
+   <text>{{item.city}}{{item.address}}</text>
+</view>
+
+<view class='item-edit'>
+   <view class='left'>
+        <radio value="{{index}}" checked="{{item.statu}}">
+        <text class='ctr'>设为默认</text>
+        </radio>
+  </view>
+  <view class='right'>
+      <text data-id="{{index}}" bindtap="delAddress">删除</text>
+  </view>
+</view>
+</view>
+</radio-group>
+<!--按钮-->
+<navigator url="../address/address">
+   <button style="position: fixed; bottom: 0; width: 100%; background-color: red; color: white; ">添加新地址</button>
+</navigator>

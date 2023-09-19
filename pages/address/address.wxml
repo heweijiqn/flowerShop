@@ -1,0 +1,75 @@
+<!--pages/address/address.wxml-->
+<view class="redact-address">
+  <view class="possess-layout">
+    <view class="mains">
+      <view class="address-msg">
+        <view class="item-msg">收货人</view>
+        <view class="section">
+          <input type="text" placeholder="请填写收货人姓名" value="{{consigneeName}}" bindblur="consigneeNameInput" placeholder-class="phcolor"></input>
+        </view>
+        <view class="address-right">
+          <image src="../../../img/icon/icon-add-address-user.png"></image>
+        </view>
+      </view>
+      <view class="address-msg">
+        <view class="item-msg">手机号码</view>
+        <view class="section">
+          <input type="number" placeholder="请填写收货人手机号码" value="{{phone}}" maxlength="11" bindblur="phoneInput" placeholder-class="phcolor"></input>
+        </view>
+      </view>
+      <view class="address-msg">
+        <view class="item-msg">所在地区</view>
+        <view class="section" bindtap='select'>
+          <input disabled="disabled" placeholder="省市区县、乡镇等" value="{{consigneeRegion}}" bindblur="consigneeRegionInput" placeholder-class="phcolor"></input>
+        </view>
+        <view class="address-rights" bindtap='select'>
+          <image src="../../../img/icon/icon-site-location.png"></image>
+          <view>定位</view>
+        </view>
+      </view>
+      <view class="address-msg">
+        <view class="item-msg">详细地址</view>
+        <view class="section">
+          <input type="text" placeholder="街道、楼牌号等" value="{{detailedAddress}}" bindblur="detailedAddressInput" placeholder-class="phcolor"></input>
+        </view>
+      </view>
+      <view class="label">
+        <view class="label-title">标签</view>
+        <view class="label-list">
+          <block wx:for="{{labelList}}" wx:key="index">
+            <view class="labels {{labelDefault==index? 'labels-active': ''}}" data-index="{{index}}" bindtap="chooseLabelSelect">{{item}}</view>
+          </block>
+        </view>
+      </view>
+    </view>
+  </view>
+</view>
+ 
+<view class="btn" bindtap="submit">保存</view>
+    
+ 
+<view class="picker" animation="{{animationAddressMenu}}" style="visibility:{{addressMenuIsShow ? 'visible':'hidden'}}">
+  <view class="picker-view" animation="{{animationAddressMenu}}" style="visibility:{{addressMenuIsShow ? 'visible':'hidden'}}">
+    <!-- 确认取消按钮 -->
+    <view class='gangedBtn'>
+      <text class="city-cancel" catchtap="cityCancel">取消</text>
+      <text style="float: right" catchtap="citySure">确定</text>
+    </view>
+    <!-- 选择地址 -->
+    <picker-view class='cont' bindchange="cityChange" value="{{value}}" wx:key="">
+      <!-- 省 -->
+      <picker-view-column>
+        <view wx:for="{{provinces}}" class="picker-item" wx:key="index">{{item.name}}</view>
+      </picker-view-column>
+      <!-- 市 -->
+      <picker-view-column>
+        <view wx:for="{{citys}}" class="picker-item" wx:key="index">{{item.name}}</view>
+      </picker-view-column>
+      <!-- 区 -->
+      <picker-view-column>
+        <view wx:for="{{areas}}" class="picker-item" wx:key="index">{{item.name}}</view>
+      </picker-view-column>
+    </picker-view>
+  </view>
+</view>
+

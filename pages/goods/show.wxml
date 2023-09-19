@@ -1,0 +1,74 @@
+<!--pages/goods/show.wxml-->
+<view class="section goods-show">
+    <view class="goods-swiper">
+        <swiper class="slide" indicator-dots="true" autoplay="true" interval="3000" duration="1000">
+            <block wx:for="{{goods.goods_slides}}" wx:key="{{index}}">
+                <swiper-item>
+                    <image src="{{item.slide_url}}" mode="widthFix" class="slide-image" data-id="{{item.id}}" bindtap="previewImage"/>
+                </swiper-item>
+            </block>
+        </swiper>
+    </view>
+    <!-- end-goods-swiper -->
+    <view class="goods-desp">
+        <view class="weui-cells">
+            <view class="weui-cell">
+                <view class="weui-cell__bd">
+                    <view class="title">{{goods.header}}</view>
+                    <view class="desp">{{goods.description}}</view>
+                    <view class="meta">{{goods.meta}}</view>
+                </view>
+            </view>
+        </view>
+        <view class="weui-cells select">
+            <view class="weui-cell__bd on-sale">
+                <text class="weui-cell__subtitle">促销</text>
+                <text class="weui-cell__strong">赠品</text>
+                <text>赠花礼卡</text>
+            </view>
+            <navigator class="weui-cell weui-cell_access" hover-class="none" url="../selectGoods/selectGoods?id={{goods.id}}">
+                <view class="weui-cell__bd selected">
+                    <text class="weui-cell__subtitle">已选</text>
+                    <text>{{goods.header}} {{goods.default[0]}} {{goods.default[1]}}</text>
+                    <text class="weui_cell__num">×{{goods.default[2]}}</text>
+                </view>
+                <view class="weui-cell__ft  weui-cell__ft_in-access"></view>
+            </navigator>
+            <view class="weui-cell weui-cell_promise">
+                <view class="weui-cell__hd success">
+                    <image src="../../assets/icons/success.png" />
+                </view>
+                <text class="weui-cell__bd intro">24小时无理由退货</text>
+                <view class="weui-cell__hd success">
+                    <image src="../../assets/icons/success.png" />
+                </view>
+                <text class="weui-cell__bd intro">3天质量问题换货</text>
+               
+               
+            </view>
+        </view>
+    </view>
+    <view class="goods-intro">
+        <view class="tab-select">
+            <view class="brief"><text class="{{selected?'on':''}}" bindtap="selectBrief">花概述</text></view>
+            <view class="parameter"><text class="{{selected1?'on':''}}" bindtap="selectParameter">花束参数</text></view>
+        </view>
+        <view class="brief-info {{selected?'show':''}}" wx:for="{{goods.intro_img}}" wx:key="{{index}}">
+            <image src="{{item}}" mode="widthFix"/>
+        </view>
+        <view class="parameter-info {{selected1?'show':''}}" wx:for="{{goods.parameter_img}}" wx:key="{{index}}">
+            <image src="{{item}}" mode="widthFix"/>
+        </view>
+    </view>
+    <view>
+    </view>
+    <view class="user-operation">
+        <view class="cart" bindtap="goCart">
+          
+            <text class="badge" wx:if="{{goods_num>0}}">{{goods_num}}</text>
+            <image src="../../assets/icons/cart.png" />
+        </view>
+        <button class="btn-buy-now" open-type="share">转发</button>
+        <view class="add-cart" bindtap="toSelect" data-id="{{goods.id}}">加入购物车</view>
+    </view>
+</view>

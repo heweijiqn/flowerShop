@@ -1,0 +1,57 @@
+/* pages/search/search.wxss */
+@import "../../templates/goods_list/goods_list.wxss";
+page{
+    background: #fff;
+}
+.weui-search-bar{
+    background: #f05c57;
+}
+.weui-search-bar__cancel-btn{
+    color: #fff;
+    font-size: 12pt;
+}
+
+.search-tages{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+}
+.search-tages text{
+    display: inline-block;
+    height: 50rpx;
+    line-height: 50rpx;
+    font-size: 10pt;
+    padding: 0 10rpx;
+    margin: 30rpx 0 0 10rpx;
+    background: #fff;
+    border: 1rpx solid #d6d6d6;
+}
+
+/*搜索下拉框*/
+.search-list{
+    width: 100%;
+    /* height: 50vh; */
+    display: flex;
+    flex-direction: column;
+    position: fixed;
+    z-index: 2;
+    background: #fff;
+    border-bottom: 1rpx solid #eee;
+}
+.search-list .search-item{
+    display: inline-block;
+    width: 100%;
+    height: 80rpx;
+    line-height: 80rpx;
+    padding: 8rpx 30rpx;
+    border-bottom: 1rpx solid #eee;
+    font-size: 10pt;
+}
+.search-list .search-item:last-child{
+    border-bottom: none;
+}
+.search-list.hidden{
+    display: none;
+}

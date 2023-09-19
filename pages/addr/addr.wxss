@@ -1,0 +1,36 @@
+/* pages/addr/addr.wxss */
+.list-item {
+   font-size: 16px;
+   padding: 30rpx;
+   padding-bottom: 80rpx;
+   margin-top: 20rpx;
+   margin-bottom: 30rpx;
+   background: pink;
+ }
+ .item-head {
+   padding-bottom: 20rpx;
+ }
+ .item-desc {
+   font-size: 16px;
+ }
+ .item-edit {
+   margin-top: 20rpx;
+   padding-top: 20rpx;
+   border-top: 1px #ccc solid;
+ }
+ .right {
+   padding-top: 10rpx;
+   float: right;
+   padding-right: 20rpx;
+ }
+ .left {
+   float: left;
+   vertical-align: middle;
+ }
+ .chk-active {
+   color: #f31;
+ }
+ .ctr {
+   position: relative;
+   top: 6rpx;
+ }

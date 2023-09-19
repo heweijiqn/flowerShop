@@ -1,0 +1,59 @@
+{
+    "pages": [
+        "pages/index/index",
+        "pages/logs/logs",
+        "pages/discovery/discovery",
+        "pages/search/search",
+        "pages/cart/cart",
+        "pages/mine/mine",
+        "pages/channel/bh/bh",
+        "pages/channel/xcj/xcj",
+        "pages/channel/phone/phone",
+        "pages/channel/huang/huang",
+        "pages/channel/mang/mang",
+        "pages/goods/show",
+        "pages/selectGoods/selectGoods",
+        "pages/addr/addr",
+        "pages/address/address",
+        "pages/service/service"
+    ],
+    "window": {
+        "backgroundTextStyle": "light",
+        "navigationBarBackgroundColor": "#DC143C",
+        "navigationBarTitleText": "",
+        "navigationBarTextStyle": "white"
+    },
+    "tabBar": {
+        "selectedColor": "#00BFFF",
+        "borderStyle": "white",
+        "backgroundColor": "#fff",
+        "list": [
+            {
+                "text": "首页",
+                "pagePath": "pages/index/index",
+                "iconPath": "assets/icons/home.png",
+                "selectedIconPath": "assets/icons/home_active.png"
+            },
+           
+            {
+                "text": "花现",
+                "pagePath": "pages/discovery/discovery",
+                "iconPath": "assets/icons/flower2.png",
+                "selectedIconPath": "assets/icons/flower2.png"
+            },
+            {
+                "text": "购物车",
+                "pagePath": "pages/cart/cart",
+                "iconPath": "assets/icons/cart.png",
+                "selectedIconPath": "assets/icons/cart_active.png"
+            },
+            {
+                "text": "我的",
+                "pagePath": "pages/mine/mine",
+                "iconPath": "assets/icons/mine.png",
+                "selectedIconPath": "assets/icons/mine_active.png"
+            }
+        ]
+      
+    }
+}

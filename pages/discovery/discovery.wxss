@@ -1,0 +1,43 @@
+/* pages/discovery/discovery.wxss */
+.cards {
+    background: #FFFFE0;
+  }
+  
+  .card {
+    background: #FFFFE0;
+    margin-bottom: 10px;
+    padding:4rpx;
+    transition: 0.5s all;
+    box-shadow:0 0 10rpx rgb(163, 14, 14);
+  }
+  
+  .card.hover {
+    box-shadow: 0 7rpx 9rpx rgba(204, 81, 81, 0.06);
+  }
+  
+  .card image {
+    position: relative;
+  }
+  
+  .card image,
+  .card video {
+    height: 40vh;
+    width: 100%;
+  }
+  
+  .card .content {
+    height: 20vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  .content .header{
+    font-size: 15pt;
+    color: #313131;
+  }
+  .content .description{
+    margin-top: 20rpx;
+    font-size: 10pt;
+    color: #ccc;
+  }
